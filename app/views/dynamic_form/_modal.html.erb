@@ -24,7 +24,7 @@
       <%= f.hidden_field "source", :value => @source %>
       <div class="modal-body">
         <fieldset aria-labelledby="fragment-fieldset" <%= 'disabled' if @readonly %> >
-          <%= render(partial: "madmp_opidor/dynamic_form/form", locals: {
+          <%= render(partial: "dynamic_form/form", locals: {
             f: f,
             current_fragment: @fragment, 
             schema: @schema,

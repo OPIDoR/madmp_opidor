@@ -11,7 +11,7 @@
   <% select_values = selected_value.present? ?  [selected_value] : [] %>
   <div class="col-md-12 dynamic-field">
     <%= select_tag field_name,
-      render(partial: 'madmp_opidor/dynamic_form/linked_fragment/select_options', locals: {
+      render(partial: 'dynamic_form/linked_fragment/select_options', locals: {
             select_values: select_values,
             selected_value: selected_value_id
           }

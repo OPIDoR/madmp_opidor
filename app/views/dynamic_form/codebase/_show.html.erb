@@ -4,7 +4,7 @@
     <% parameters.each do |param|
         disabled = param["oneshot"] && runned_scripts&.dig(param["script_id"].to_s).present?
     %>
-        <%= render(partial: 'madmp_opidor/dynamic_form/codebase/run_button', locals: { 
+        <%= render(partial: 'dynamic_form/codebase/run_button', locals: { 
             fragment_id: fragment.id,
             label: param["label@#{template_locale}"],
             ttip: param["tooltip@#{template_locale}"],
@@ -14,7 +14,7 @@
     <% end %>
 <% else %>
     <% disabled =  parameters["oneshot"] && runned_scripts&.dig(parameters["script_id"].to_s).present? %>
-    <%= render(partial: 'madmp_opidor/dynamic_form/codebase/run_button', locals: { 
+    <%= render(partial: 'dynamic_form/codebase/run_button', locals: { 
         fragment_id: fragment.id,
         label: parameters["label@#{template_locale}"],
         ttip: parameters["tooltip@#{template_locale}"],

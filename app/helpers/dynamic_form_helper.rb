@@ -18,7 +18,7 @@ module DynamicFormHelper
                         ttip: nil,
                         example: nil,
                         default_value: nil)
-    render partial: 'madmp_opidor/dynamic_form/fields/text_field',
+    render partial: 'dynamic_form/fields/text_field',
           locals: {
             f: form,
             multiple: is_multiple,
@@ -53,7 +53,7 @@ module DynamicFormHelper
                             ttip: nil,
                             example: nil,
                             default_value: nil)
-    render partial: 'madmp_opidor/dynamic_form/fields/textarea_field',
+    render partial: 'dynamic_form/fields/textarea_field',
           locals: {
             f: form,
             index: index,
@@ -88,7 +88,7 @@ module DynamicFormHelper
                       ttip: nil,
                       example: nil,
                       default_value: nil)
-    render partial: 'madmp_opidor/dynamic_form/fields/text_field',
+    render partial: 'dynamic_form/fields/text_field',
           locals: {
             f: form,
             multiple: is_multiple,
@@ -124,7 +124,7 @@ module DynamicFormHelper
                         ttip: nil,
                         example: nil,
                         default_value: nil)
-    render partial: 'madmp_opidor/dynamic_form/fields/text_field',
+    render partial: 'dynamic_form/fields/text_field',
           locals: {
             f: form,
             multiple: is_multiple,
@@ -160,7 +160,7 @@ module DynamicFormHelper
                         ttip: nil,
                         example: nil,
                         default_value: nil)
-    render partial: 'madmp_opidor/dynamic_form/fields/text_field',
+    render partial: 'dynamic_form/fields/text_field',
           locals: {
             f: form,
             multiple: is_multiple,
@@ -196,7 +196,7 @@ module DynamicFormHelper
                           readonly: false,
                           index: 0,
                           ttip: nil)
-    render partial: 'madmp_opidor/dynamic_form/fields/number_field',
+    render partial: 'dynamic_form/fields/number_field',
           locals: {
             f: form,
             multiple: is_multiple,
@@ -218,7 +218,7 @@ module DynamicFormHelper
 
   # rubocop:disable  Metrics/ParameterLists
   def create_checkbox_field(form, value, name, label, field_id, validation: nil, readonly: false)
-    render partial: 'madmp_opidor/dynamic_form/fields/checkbox_field',
+    render partial: 'dynamic_form/fields/checkbox_field',
           locals: {
             f: form,
             field_value: value,
@@ -249,9 +249,9 @@ module DynamicFormHelper
                                   default_value: nil,
                                   overridable: nil)
     partial_name = if multiple
-                    'madmp_opidor/dynamic_form/fields/registry/multiple'
+                    'dynamic_form/fields/registry/multiple'
                   else
-                    'madmp_opidor/dynamic_form/fields/registry/simple'
+                    'dynamic_form/fields/registry/simple'
                   end
     render partial: partial_name,
           locals: {
@@ -292,7 +292,7 @@ module DynamicFormHelper
                                           ttip: nil,
                                           default_value: nil,
                                           overridable: nil)
-    render partial: 'madmp_opidor/dynamic_form/fields/registry/single_complex',
+    render partial: 'dynamic_form/fields/registry/single_complex',
           locals: {
             f: form,
             value: value,
@@ -333,7 +333,7 @@ module DynamicFormHelper
                                             ttip: nil,
                                             default_value: nil,
                                             overridable: nil)
-    render partial: 'madmp_opidor/dynamic_form/fields/registry/multiple_complex',
+    render partial: 'dynamic_form/fields/registry/multiple_complex',
           locals: {
             f: form,
             value: value,
@@ -357,7 +357,7 @@ module DynamicFormHelper
   # rubocop:enable  Metrics/ParameterLists
 
   def create_hidden_field(form, value, name)
-    render partial: 'madmp_opidor/dynamic_form/fields/const_field',
+    render partial: 'dynamic_form/fields/const_field',
           locals: {
             f: form,
             field_value: value,
@@ -368,7 +368,7 @@ module DynamicFormHelper
   end
 
   def create_const_field(form, value, name, label)
-    render partial: 'madmp_opidor/dynamic_form/fields/const_field',
+    render partial: 'dynamic_form/fields/const_field',
           locals: {
             f: form,
             field_value: value,

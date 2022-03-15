@@ -16,7 +16,7 @@
   >
   <fieldset class="sub-fragment">
     <legend class="sub-fragment" data-toggle="tooltip" data-original-title="<%= ttip %>"><%= field_label %></legend>
-      <%= render(partial: 'madmp_opidor/dynamic_form/fields/fragment_select_field', locals: {
+      <%= render(partial: 'dynamic_form/fields/fragment_select_field', locals: {
         f: f,
         selected_value: nil,
         readonly: readonly,
@@ -39,7 +39,7 @@
         <thead>
         </thead>
         <tbody>
-          <%= render(partial: 'madmp_opidor/dynamic_form/fields/contributor/contributor_list', locals: {
+          <%= render(partial: 'dynamic_form/fields/contributor/contributor_list', locals: {
                   contributors: contributors, 
                   parent_id: parent_id,
                   schema_id: contributor_schema.id,

@@ -79,7 +79,7 @@
       <% 
         value = dmp_fragments.find(value["dbid"]) unless value.nil?
       %>
-      <%= render(partial: 'madmp_opidor/dynamic_form/fields/fragment_select_field', locals: {
+      <%= render(partial: 'dynamic_form/fields/fragment_select_field', locals: {
         f: f,
         selected_value: value,
         readonly: readonly,
@@ -107,7 +107,7 @@
         %>
         <fieldset class="sub-fragment fragment-<%= sub_fragment.id unless sub_fragment.nil? %>">
           <legend class="sub-fragment" data-toggle="tooltip" data-original-title="<%= ttip %>"><%= label %></legend>
-          <%= render(partial: 'madmp_opidor/dynamic_form/form', locals: { 
+          <%= render(partial: 'dynamic_form/form', locals: { 
                 f: f, 
                 current_fragment: sub_fragment,
                 schema: sub_schema,
@@ -139,7 +139,7 @@
     %>
     <% if sub_schema.classname.eql?("contributor") %>
       <% persons = dmp_fragments.where(classname: "person") %>
-      <%= render(partial: 'madmp_opidor/dynamic_form/fields/contributor/contributor_field', locals: {
+      <%= render(partial: 'dynamic_form/fields/contributor/contributor_field', locals: {
         f: f,
         field_label: label,
         contributor_schema: sub_schema,
@@ -153,7 +153,7 @@
         }
       ) %>
     <% else %>
-      <%= render(partial: 'madmp_opidor/dynamic_form/fields/fragment_list_field', locals: { 
+      <%= render(partial: 'dynamic_form/fields/fragment_list_field', locals: { 
         field_values: values, 
         readonly: readonly,
         parent_id: current_fragment.id,
@@ -174,7 +174,7 @@
   <%# ############################### %>
   <% if prop['type'].eql?('array') %>
     <%# Input field associated with 'Add' and 'Delete' icons %>
-      <%= render(partial: 'madmp_opidor/dynamic_form/fields/multiple_field', locals: { 
+      <%= render(partial: 'dynamic_form/fields/multiple_field', locals: { 
         f: f, 
         field_values: value,
         readonly: readonly,
